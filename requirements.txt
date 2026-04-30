@@ -1,0 +1,12 @@
+langgraph
+langchain_openai
+Pillow
+langchain_core
+langchain-google-genai
+python-dotenv
+llama-index-retrievers-bm25
+ddgs
+requests
+beautifulsoup4
+pypdf
+openpyxl

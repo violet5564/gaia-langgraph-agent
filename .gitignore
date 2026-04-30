@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+
+# Python cache / build outputs
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+*.egg-info/
+
+# Local runtime files
+.chainlit/
+.files/
+gaia_files/
+debug.log
+
+# Local editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Optional local result files
+# 如果你想把当前成绩作为项目记录，可以取消下面两行注释并手动 git add 需要的 json。
+# gaia_answers.json
+# gaia_errors.json
