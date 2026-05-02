@@ -1,0 +1,11 @@
+services:
+  gaia-agent:
+    build: .
+    container_name: gaia-langgraph-agent
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./gaia_files:/app/gaia_files
+    restart: unless-stopped

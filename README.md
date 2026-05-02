@@ -136,6 +136,52 @@ http://localhost:8000
 task_id 是 99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3，文件名是 Strawberry pie.mp3。请根据音频回答题目。
 ```
 
+## Docker 运行
+
+如果本机已经安装 Docker Desktop，也可以用 Docker Compose 一键启动 Chainlit 服务。
+
+确认 `.env` 已经存在，并且至少包含：
+
+```text
+GEMINI_API_KEY=你的 Gemini API Key
+```
+
+构建并启动服务：
+
+```powershell
+docker compose up --build
+```
+
+启动后访问：
+
+```text
+http://localhost:8000
+```
+
+后台运行：
+
+```powershell
+docker compose up -d --build
+```
+
+查看日志：
+
+```powershell
+docker compose logs -f
+```
+
+停止服务：
+
+```powershell
+docker compose down
+```
+
+这里的 Docker 配置包括：
+
+- `Dockerfile`：定义如何构建 Python + Chainlit 运行环境。
+- `docker-compose.yml`：定义服务、端口映射、环境变量和本地文件挂载。
+- `.dockerignore`：排除 `.env`、`.venv`、缓存文件和运行结果，避免进入镜像构建上下文。
+
 ## 入口二：批量运行 GAIA 问题
 
 这是评测入口，用来从课程 API 拉取题目并批量运行 Agent。
